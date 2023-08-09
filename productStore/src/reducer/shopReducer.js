@@ -1,15 +1,16 @@
-export const inicialStateCart =
-    JSON.parse(window.localStorage.getItem("cart")) || [];
+export const inicialStateCart = JSON.parse(window.localStorage.getItem("cart")) || [];
 
 export const TYPE = {
     ADD_TO_CART: "ADD_TO_CART",
     CLEAR_CART: "CLEAR_CART",
     DELETE_ITEM_FROM_CART: "DELETE_ITEM_FROM_CART",
+    UPDATE_TOTAL_PRICE: "UPDATE_TOTAL_PRICE"
 };
 
 export const updateLocalStorage = (state) => {
     window.localStorage.setItem("cart", JSON.stringify(state));
 };
+
 
 export const shopReducer = (state, action) => {
     switch (action.type) {

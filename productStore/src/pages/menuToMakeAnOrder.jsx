@@ -1,13 +1,13 @@
-import { getAllProduct } from "../../apis/product.api";
+import { getAllProduct } from "../apis/product.api";
 import { useState, useEffect } from "react";
-import { useCart } from "../../hooks/useCart";
-import { useTotal } from "../../hooks/useTotal";
+import { useCart } from "../hooks/useCart";
+import { useTotal } from "../hooks/useTotal";
 import { AiFillMinusCircle, AiFillPlusCircle } from "react-icons/ai";
-import style from "../../styles/allListStyles.module.css";
-import { getProducsOrderByCategory } from "../product/tableListFunction";
-import JSONdata from "../../json/data.json";
+import style from "../styles/allListStyles.module.css";
+import { getProducsOrderByCategory } from "../components/product/tableListFunction";
+import JSONdata from "../json/data.json";
 
-export function OrderList() {
+export function MenuToMakeAnOrder() {
     const { cart, deleteItemFromCart, addToCart } = useCart();
 
     const { totalPriceState, updateTotalPrice } = useTotal();
@@ -23,16 +23,7 @@ export function OrderList() {
 
     const productsOrderByCategory = getProducsOrderByCategory(JSONdata);
 
-    async function handleAdd(data){
-        await addToCart(data);
-        updateTotalPrice(cart);
-        }
-
-    async function handleDelete(item) {
-        await deleteItemFromCart(item);
-        await updateTotalPrice(cart);
-        await totalPriceState
-    }
+    updateTotalPrice(cart);
 
     return (
         <div className={style.mainContainerOrderMenu}>
@@ -71,7 +62,9 @@ export function OrderList() {
                                                             style.listButton
                                                         }
                                                         onClick={() => {
-                                                            handleDelete(item);
+                                                            deleteItemFromCart(
+                                                                item
+                                                            );
                                                         }}>
                                                         <AiFillMinusCircle
                                                             className={
@@ -89,7 +82,7 @@ export function OrderList() {
                                     <button
                                         className={style.listButton}
                                         onClick={() => {
-                                            handleAdd(data)
+                                            addToCart(data);
                                         }}>
                                         <AiFillPlusCircle
                                             className={style.buttonIcon}

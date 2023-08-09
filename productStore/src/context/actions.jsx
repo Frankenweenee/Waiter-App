@@ -26,11 +26,11 @@ export function actions() {
     });
   };
 
-  return { state, addToCart, deleteItemFromCart, clearCart  };
+  return { state, addToCart, deleteItemFromCart, clearCart }
 }
 
 export function CartProvider({ children }) {
-  const { state, addToCart, deleteItemFromCart, clearCart } = actions();
+  const { state, addToCart, deleteItemFromCart, clearCart  } = actions();
 
   return (
     <CartContext.Provider
