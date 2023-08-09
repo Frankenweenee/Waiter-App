@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?&family=Antonio:wght@100&family=Fjalla+One&&family=Voltaire&display=swap");
+
+/* ------------full body o the web -----------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: azure;
+    background-image: radial-gradient(#565f63 0.55px, azure 0.55px);
+    background-size: 11px 11px;
+}
+
+.mainContainer {
+    width: 100vw;
+}
+
+a {
+    color: rgb(76, 103, 126);
+    text-decoration: none;
+}
+
+a:hover {
+    color: darkcyan;
+}
+
+.navContainer {
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.companyContainer {
+    display: flex;
+    align-items: center;
+}
+
+.companyLogo {
+    height: 6vh;
+    margin-left: 4vh;
+}
+
+.companyName {
+    color: darkslategrey;
+    font-size: 5vh;
+    font-family: "Voltaire", sans-serif;
+    margin-left: 2vw;
+}
+
+.navHeaderContainer {
+    margin-right: 3vw;
+}
+
+.navButton {
+    font-family: "Antonio", sans-serif;
+    font-size: 4.5vh;
+    text-decoration: none;
+    padding-right: 2vw;
+}
+
+.mainContainer main {
+    background-image: url(../img/home.img/fondo1.jpg);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    height: 78vh;
+    display: grid;
+    align-items: center;
+}
+
+.descriptionCenterContainer {
+    background-color: rgba(86, 95, 99, 0.7);
+    width: fit-content;
+    color: azure;
+    font-size: 9vh;
+    font-family: "Fjalla One", sans-serif;
+    margin-left: 6vh;
+    padding: 5vh;
+    border-radius: 2vh;
+}
+
+.mainContainer footer {
+    height: 12vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: darkslategray;
+}
+
+.iconsContainer {
+    display: flex;
+    gap: 2vw;
+    font-size: 4.5vh;
+}
+
+@media (max-width: 768px) {
+    .mainContainer {
+        width: 100vw;
+    }
+    .mainContainer nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navButton {
+        font-size: 2.7vh;
+    }
+
+    .descriptionCenterContainer {
+        width: fit-content;
+        font-size: 9vh;
+        margin: 0 5% 0 5%;
+    }
+    .descriptionCenterContainer {
+        font-size: 7vw;
+        margin: auto;
+        
+    }
+
+    .mainContainer main {
+        background-image: none;
+    }
+
+    .navHeaderContainer {
+        width: 100vw;
+        margin-right: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .mainContainer footer {
+        flex-direction: column-reverse;
+        margin-bottom: 2vh;
+    }
+
+    .politicsContainer {
+        width: 95%;
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+    }
+
+    .iconsContainer {
+        width: 95%;
+        justify-content: center;
+    }
+}

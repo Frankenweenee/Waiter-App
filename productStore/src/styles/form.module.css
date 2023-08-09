@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@100&family=IBM+Plex+Mono:wght@300&display=swap");
+
+.title {
+  width: auto;
+  margin: 2.5vh 0 2.5vh 0;
+  font-family: "antonio", sans-serif;
+  text-align: center;
+  color:#3e6769;
+}
+
+form {
+  background-color: rgba(62, 103, 105, 0.4);
+  width: 97%;
+  margin: 1.5%;
+  display: grid;
+  gap: 1vh;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 3vh;
+  text-decoration: none;
+  color: rgb(52, 52, 52);
+  border-radius: 4px;
+  margin: auto;
+ 
+}
+
+input,
+option,
+select {
+  justify-content: space-between;
+  border-radius: 2px;
+  width: 95%;
+  margin: auto;
+  border: none;
+  padding: 0.5vw;
+  font-size: 2.5vh;
+}
+label,
+span {
+  width: 95%;
+  margin: auto;
+  text-align: left;
+
+}
+::placeholder{
+  font-family: "IBM Plex Mono", monospace;
+  color: grey;
+}
+select{
+  font-family: "IBM Plex Mono", monospace;
+  color: grey;
+}
+
+.formButtonContainer {
+width: 95%;
+margin: auto;
+display: flex;
+flex-direction: row;
+justify-content: end;}
+
+
+button[type=submit],
+.formButton {
+    font-family: 'Antonio', sans-serif;
+    text-decoration: none;
+    font-size: 2.5vh;
+    margin: 3vh 0 3vh 0;
+    background-color: #3e6769;
+    color: whitesmoke;
+    padding: 0.3vh;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+
+
+@media (min-width: 768px) {
+ form{width: 30vw;}}

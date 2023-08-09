@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "category": "Agua",
+    "iva": "Reducido",
+    "product": "Solan de Cabras",
+    "price": 3.0
+  },
+  {
+    "id": 3,
+    "category": "Refrescos",
+    "iva": "Reducido",
+    "product": "Coca Cola",
+    "price": 3.0
+  },
+  {
+    "id": 4,
+    "category": "Refrescos",
+    "iva": "Reducido",
+    "product": "Fanta",
+    "price": 3.0
+  },
+  {
+    "id": 5,
+    "category": "Combinados",
+    "iva": "Reducido",
+    "product": "Ron Barceló",
+    "price": 15.0
+  }
+]
