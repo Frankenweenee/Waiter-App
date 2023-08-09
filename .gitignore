@@ -1,11 +1,10 @@
-package.json
 env
 .vscode
 productStore/vite.config.js
 node_modules
 productStore/package.json
-productStore/package-lock.json
 productStore/node_modules
 productStore/.eslintrc.cjs
 manage.py
+vite.config.js
 
