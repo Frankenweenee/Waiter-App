@@ -4,8 +4,8 @@ env
 productStore/vite.config.js
 node_modules
 productStore/package.json
-productStore/package-json/package-lock.json
+productStore/package-lock.json
 productStore/node_modules
-productStore/eslintrc.cjs
+productStore/.eslintrc.cjs
 manage.py
 
