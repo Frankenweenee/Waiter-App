@@ -13,15 +13,26 @@ export function IvaForm() {
 
     //to handle 'crear' - 'editar'
     const onSubmit = handleSubmit(async (data) => {
-        if (params.id) {
-            await updateIva(params.id, data).then(() => navigate("/iva"));
-            window.location.reload(false);
-        } else {
-            await createIva(data).then(() => navigate("/iva"));
-            window.location.reload(false);
+        if (params.id)
+            try {
+                await updateIva(params.id, data).then(() =>
+                    navigate("/panel_de_control/iva")
+                );
+                window.location.reload(false);
+            } catch (error) {
+                console.error("gggrrrr.... this error:", error);
+            }
+        else {
+            try {
+                await createIva(data).then(() =>
+                    navigate("/panel_de_control/iva")
+                );
+                window.location.reload(false);
+            } catch (error) {
+                console.error("gggrrrr.... this error:", error);
+            }
         }
     });
-
     //to charge the data on the inputs
 
     useEffect(() => {
@@ -52,7 +63,7 @@ export function IvaForm() {
             <input
                 placeholder="Porcentual"
                 type="number"
-                {...register("porcentual", { required: true })}
+                {...register("percent", { required: true })}
             />
             <div className={style.formButtonContainer}>
                 {params.id == null ? (

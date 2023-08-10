@@ -18,7 +18,7 @@ export function CatList() {
     }, []);
 
     return (
-        <div className={style.mainContainer}>
+        <>
             <div className={style.titleContainer}>
                 <h2 className={style.title}>CATEGORIA</h2>
             </div>
@@ -31,7 +31,7 @@ export function CatList() {
                                 <button
                                     className={style.listButton}
                                     onClick={() => {
-                                        navigate(`/categoria/${items.id}`);
+                                        navigate(`/panel_de_control/categoria/${items.id}`);
                                         window.location.reload(false);
                                     }}>
                                     <CiEdit className={style.buttonIcon} />
@@ -53,6 +53,6 @@ export function CatList() {
                     ))}
                 </tbody>
             </table>
-        </div>
+        </>
     );
 }

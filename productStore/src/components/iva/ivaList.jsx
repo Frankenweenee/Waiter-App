@@ -19,7 +19,7 @@ export function IvaList() {
     }, []);
 
     return (
-        <div className={style.mainContainer}>
+        <>
             <div className={style.titleContainer}>
                 <h2 className={style.title}>IVA</h2>
             </div>
@@ -41,7 +41,7 @@ export function IvaList() {
                             <button
                                 className={style.listButton}
                                 onClick={() => {
-                                    navigate(`/iva/${items.id}`);
+                                    navigate(`/panel_de_control/iva/${items.id}`);
                                     window.location.reload(false);
                                 }}>
                                 <CiEdit className={style.buttonIcon} />
@@ -63,6 +63,6 @@ export function IvaList() {
                 ))}
                 </tbody>
             </table>
-        </div>
+        </>
     );
 }

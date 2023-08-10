@@ -1,32 +1,45 @@
 @import url("https://fonts.googleapis.com/css2?family=Antonio:wght@100&family=IBM+Plex+Mono:wght@300&display=swap");
 
-/* -- common styles -- */
+@import './orderMenu.css';
 
 .mainContainer {
-    background-color: rgba(62, 103, 105, 0.4);
-    font-family: "IBM Plex Mono", monospace;
-    font-size: 2.1vh;
-    justify-content: space-between;
-    width: 95%;
-    height: 100%;
-    padding: 4vh 0 4vh 0;
-    border-radius: 4px;
-    margin: auto;
+    width: 100%;
+    border-radius: 10px;
+    background-color: rgba(84, 199, 224, 0.3);
+    padding: 1vh 0 2vh 0;
+    font-family: "IBM plex Mono", sans-serif;
+    
 }
 
 .titleContainer {
     display: flex;
+    height: 9vh;
     width: 100%;
-    margin: 1vh 0 1vh 0;
     justify-content: center;
+    align-items: center;
 }
 
+
 .title {
-    width: auto;
-    margin: 0 0 4vh 0;
     font-family: "antonio", sans-serif;
+    font-size: 3.5vh;
     text-align: center;
-    color: #3e6769;
+    color: #087e8b;
+}
+
+/* -- table styles DON'T TOUCH!!!! --*/
+
+.tableColumnTitle{
+    color: #087e8b;
+    margin-bottom: 2vh;
+}
+
+.categoryTableTitle {
+    font-family: "antonio", sans-serif;
+    font-size: 2.5vh;
+    color: #087e8b;
+    font-weight: bold;
+    margin-bottom: 2vh;
 }
 
 table {
@@ -70,13 +83,7 @@ td {
     justify-content: end;
 }
 
-.categoryTableTitle {
-    font-family: "antonio", sans-serif;
-    font-size: 2.5vh;
-    color: #3e6769;
-    font-weight: bold;
-    margin-bottom: 2vh;
-}
+/*----- table buttons------*/
 
 .listButton {
     all: unset;
@@ -84,129 +91,13 @@ td {
 
 .buttonIcon {
     font-size: 4vh;
-    color: #3e6769;
+    color: #087e8b;
 }
 
-/* -- order menu specific styles --*/
-
-.mainContainerOrderMenu {
-    width: 100%;
-    font-family: "IBM plex Mono", sans-serif;
+@media (max-width: 768px){
+    .mainContainer{
+height: 100vh;}
 }
 
-.orderButtonContainer {
-    bottom: 2vh;
-    width: 100%;
-}
 
-.buttonsContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-    width: 95%;
-    margin: auto;
-}
 
-.buttonsContainer2 {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding-right: 10%;
-}
-
-.bigButtons {
-    display: flex;
-    width: 95%;
-    margin: 3% 2.5% 0 2.5%;
-    padding: 1vh 0 1vh 0;
-    border: none;
-    align-content: center;
-    justify-content: center;
-    background-color: #3e6769;
-    border-radius: 20px;
-    font-family: "antonio", sans-serif;
-    color: whitesmoke;
-    font-size: 3vh;
-}
-
-/* -- modal styles --*/
-
-.closeButton {
-    margin: 2vh 0 0 50%;
-    color: #3e6769;
-    font-size: 28px;
-}
-
-.modalStyle {
-    position: fixed;
-    background-color: azure;
-    width: 100%;
-    height: 100%;
-    font-family: "IBM plex Mono", sans-serif;
-}
-.clearAndTotalPriceContainer {
-    width: 90%;
-    margin: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.total {
-    font-family: "IBM plex Mono", sans-serif;
-}
-
-.eraseOrderButton {
-    font-family: "IBM plex Mono";
-    background-color: #3e6769;
-    color: azure;
-    border: none;
-    padding: 2%;
-    border-radius: 4px;
-}
-
-/* cart */
-
-.hiddenContainer {
-    overflow: hidden;
-}
-
-.mainContainerStore {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-}
-
-.canvasContainer {
-    position: absolute;
-    width: 25vw;
-    border-radius: 30px;
-    border-radius: 30px;
-    border: 10px solid #000;
-}
-
-.mobileCanvas {
-    width: 350px;
-    height: 600px;
-}
-
-.companyLogoContainer {
-    background-image: url(../img/companyImage.jpg);
-    background-size: 100% auto;
-    margin-top: 0;
-    width: 100%;
-    height: 20vh;
-}
-
-.fixedDiv {
-    position: relative;
-    margin-bottom: 1vh;
-}
-
-@media (min-width: 768px){
-    .modalStyle{
-    width: 350px;}
-}

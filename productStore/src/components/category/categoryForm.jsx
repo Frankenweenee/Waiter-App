@@ -16,10 +16,10 @@ export function CatForm() {
 
   const onSubmit = handleSubmit(async (data) => {
     if (params.id) {
-      await updateCat(params.id, data).then(() => navigate("/categoria"));
+      await updateCat(params.id, data).then(() => navigate("/panel_de_control/categoria"));
       window.location.reload(false);
     } else {
-      await createCat(data).then(() => navigate("/categoria"));
+      await createCat(data).then(() => navigate("/panel_de_control/categoria"));
       window.location.reload(false);
     }
   });
