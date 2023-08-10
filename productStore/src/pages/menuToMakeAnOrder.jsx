@@ -7,7 +7,6 @@ import style from "../styles/allListStyles.module.css";
 import { getProducsOrderByCategory } from "../components/product/tableListFunction";
 import JSONdata from "../json/data.json";
 import { Header } from "../components/menuOrder/header";
-import { BigButton } from "../styles/bigButtons";
 
 export function MenuToMakeAnOrder() {
     const { cart, deleteItemFromCart, addToCart } = useCart();
@@ -104,18 +103,18 @@ export function MenuToMakeAnOrder() {
                         ))}
                     </table>
                 ))}
-                <div className={style.fixedDiv}>
+                
                     <div className={style.orderButtonContainer}>
                         {cart.length === 0 ? (
                             <h4 className={style.emptyShopCartSign}>Carro vacío</h4>
                         ) : (
                             <button className={style.bigButton} onClick={handlePedido}>
-                                VER PEDIDO -
-                                <b>{`Total:${totalPriceState}€`}-</b>
+                                VER PEDIDO
+                                <b style={{ margin: '0 10px' }}>- {` Total:${totalPriceState}€`} -</b>
                             </button>
                         )}
                     </div>
-                </div>
+              
             </div>
         </div>
      </div>

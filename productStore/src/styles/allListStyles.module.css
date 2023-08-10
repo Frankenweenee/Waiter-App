@@ -89,10 +89,17 @@ td {
     all: unset;
 }
 
-.buttonIcon {
+.buttonIconNoBackground {
     font-size: 4vh;
     color: #087e8b;
-}
+    border-radius: 6px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    &:hover {
+      cursor: pointer;
+      background-color: #087e8b;
+      color: #00f9fd;
+    }
+  }
 
 @media (max-width: 768px){
     .mainContainer{

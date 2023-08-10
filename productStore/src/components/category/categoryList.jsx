@@ -34,7 +34,7 @@ export function CatList() {
                                         navigate(`/panel_de_control/categoria/${items.id}`);
                                         window.location.reload(false);
                                     }}>
-                                    <CiEdit className={style.buttonIcon} />
+                                    <CiEdit className={style.buttonIconNoBackground} />
                                 </button>
                                 <button
                                     className={style.listButton}
@@ -46,7 +46,7 @@ export function CatList() {
                                         }
                                         window.location.reload(false);
                                     }}>
-                                    <CiEraser className={style.buttonIcon} />
+                                    <CiEraser className={style.buttonIconNoBackground} />
                                 </button>
                             </td>
                         </tr>
