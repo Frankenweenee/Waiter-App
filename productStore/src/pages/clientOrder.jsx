@@ -7,18 +7,20 @@ import { CiCircleRemove } from "react-icons/ci";
 import style from "../styles/allListStyles.module.css";
 
 export function ClientOrder() {
-    const { cart, addToCart, clearCart, deleteItemFromCart } = useCart();
+    const mediaQuery = window.matchMedia("(max-width:768px)");
 
-    const { totalPriceState, updateTotalPrice } = useTotal();
-    const handleButtonClear = () => {
-        clearCart();
-    };
-    updateTotalPrice(cart);
-    return (
-        <div className={style.canvasHiddenContainer}>
-            {/*frame mobile*/}
-            <div className={style.canvasFrameContainer}>
-                <div className={style.mainContainer}>
+    function ClientOrderMenu() {
+        const { cart, addToCart, clearCart, deleteItemFromCart } = useCart();
+
+        const { totalPriceState, updateTotalPrice } = useTotal();
+        const handleButtonClear = () => {
+            clearCart();
+        };
+        updateTotalPrice(cart);
+
+        return (
+            <>
+                <div className={style.tableContainer}>
                     <Header />
                     <div className={style.closeAndEraseContainer}>
                         <a className={style.listButton} href={"/carta"}>
@@ -75,18 +77,27 @@ export function ClientOrder() {
                             </tbody>
                         ))}
                     </table>
-                    <div className={style.orderButtonContainer}>
-                        <div className={style.totalPriceContainer}>
-                            <h3 className={style.total}>
-                                Total: {totalPriceState}
-                            </h3>
-                        </div>
-                        <button className={style.bigButton}>
-                            PAGAR PEDIDO
-                        </button>
-                    </div>
                 </div>
-            </div>
-        </div>
+                <div className={style.orderButtonContainer}>
+                    <div className={style.totalPriceContainer}>
+                        <h3 className={style.total}>
+                            Total: {totalPriceState}
+                        </h3>
+                    </div>
+                    <button className={style.bigButton}>PAGAR PEDIDO</button>
+                </div>
+            </>
+        );
+    }
+    return (
+        <>
+            {mediaQuery.matches ? (
+                <ClientOrderMenu />
+            ) : (
+                <div className={style.canvasFrameContainer}>
+                    <ClientOrderMenu />
+                </div>
+            )}
+        </>
     );
 }

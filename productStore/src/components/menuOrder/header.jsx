@@ -1,8 +1,9 @@
-import style from '../../styles/allListStyles.module.css'
+
+import style from './header.module.css'
 export function Header() {
     return (
         <div className={style.companyLogoContainer}>
-            <h4>Nombre de la empresita</h4>
+            <h4 className={style.title}>Virtual Waiter bar</h4>
         </div>
     );
 }

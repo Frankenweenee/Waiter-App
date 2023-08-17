@@ -6,6 +6,13 @@
     "product": "Solan de Cabras",
     "price": 3.0
   },
+   {
+    "id": 2,
+    "category": "Agua",
+    "iva": "Reducido",
+    "product": "San Peregrino",
+    "price": 4.5
+  },
   {
     "id": 3,
     "category": "Refrescos",
@@ -22,9 +29,38 @@
   },
   {
     "id": 5,
-    "category": "Combinados",
+    "category": "Rones",
     "iva": "Reducido",
     "product": "Ron Barceló",
     "price": 15.0
+  },
+  {
+    "id": 6,
+    "category": "Rones",
+    "iva": "Reducido",
+    "product": "zacappa",
+    "price": 18.0
+  },
+  {
+    "id": 7,
+    "category": "Ginebras",
+    "iva": "Reducido",
+    "product": "Tanqueray",
+    "price": 15.0
+  },
+  {
+    "id": 8,
+    "category": "Ginebras",
+    "iva": "Reducido",
+    "product": "G-vine",
+    "price": 18.0
+  },
+  {
+    "id": 8,
+    "category": "Ginebras",
+    "iva": "Reducido",
+    "product": "Seagram's",
+    "price": 18.0
   }
+
 ]
