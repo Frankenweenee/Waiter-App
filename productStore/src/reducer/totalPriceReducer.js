@@ -1,4 +1,7 @@
 export const initialTotalPrice = 0
+export const TYPE = {
+    UPDATE_TOTAL_PRICE: "UPDATE_TOTAL_PRICE"
+}
 
 export const totalPriceOrder = (state, action) => {
     switch (action.type) {

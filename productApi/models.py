@@ -1,12 +1,10 @@
 from django.db import models
 
-
 class Category(models.Model):
     category = models.CharField(max_length=40)
 
     def __str__(self):
         return self.category
-
 
 class Iva(models.Model):
     tipo = models.CharField(max_length=50)
@@ -14,7 +12,6 @@ class Iva(models.Model):
 
     def __str__(self):
         return self.tipo
-
 
 class Product(models.Model):
     product = models.CharField(max_length=40)
@@ -24,3 +21,5 @@ class Product(models.Model):
 
     def __str__(self):
         return self.product
+
+

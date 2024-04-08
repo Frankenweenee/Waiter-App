@@ -5,6 +5,7 @@ export const TotalPriceContext = createContext();
 
 export function useTotalProvider() {
     const [state, dispatch] = useReducer(totalPriceOrder, initialTotalPrice);
+    
     const updateTotalPrice = (data) => {
         dispatch({ type: "UPDATE_TOTAL_PRICE", payload: data });
     };

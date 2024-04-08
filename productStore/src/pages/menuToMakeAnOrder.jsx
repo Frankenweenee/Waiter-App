@@ -33,8 +33,14 @@ export function MenuToMakeAnOrder() {
 
         const productsOrderByCategory = getProducsOrderByCategory(JSONdata);
 
-        updateTotalPrice(cart);
-
+        const handleButtonUpdateCart = (data) =>{
+            addToCart(data);
+         }
+         
+         useEffect(() => {
+            updateTotalPrice(cart);
+        }, [cart]);
+     
         return (
             <>
                 <div className={style.tableContainer}>
@@ -97,7 +103,9 @@ export function MenuToMakeAnOrder() {
                                             <button
                                                 className={style.listButton}
                                                 onClick={() => {
-                                                    addToCart(data);
+                                                    handleButtonUpdateCart(
+                                                        data
+                                                    );
                                                 }}>
                                                 <AiFillPlusCircle
                                                     className={style.buttonIcon}
@@ -114,9 +122,7 @@ export function MenuToMakeAnOrder() {
                     {cart.length === 0 ? (
                         <h4 className={style.emptyShopCartSign}>Carro vacío</h4>
                     ) : (
-                        <Link
-                            className={style.bigButton}
-                            to={'/tu_pedido'}>
+                        <Link className={style.bigButton} to={"/tu_pedido"}>
                             VER PEDIDO
                             <b style={{ margin: "0 10px" }}>
                                 - {` Total:${totalPriceState}€`} -

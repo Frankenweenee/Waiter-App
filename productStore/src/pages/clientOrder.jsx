@@ -1,6 +1,7 @@
 import { useCart } from "../hooks/useCart";
 import { useTotal } from "../hooks/useTotal";
 import { Header } from "../components/menuOrder/header";
+import { useEffect } from "react";
 
 import { AiFillMinusCircle, AiFillPlusCircle } from "react-icons/ai";
 import { CiCircleRemove } from "react-icons/ci";
@@ -16,10 +17,18 @@ export function ClientOrder() {
         const handleButtonClear = () => {
             clearCart();
         };
-        updateTotalPrice(cart);
+    
+        const handleButtonUpdateCart = (data) =>{
+               addToCart(data);
+            }
 
+            useEffect(() => {
+                updateTotalPrice(cart);
+            }, [cart]);
+      
         return (
             <>
+           
                 <div className={style.tableContainer}>
                     <Header />
                     <div className={style.closeAndEraseContainer}>
@@ -64,10 +73,7 @@ export function ClientOrder() {
                                         </div>
                                         <button
                                             className={style.listButton}
-                                            onClick={() => {
-                                                addToCart(data);
-                                                updateTotalPrice(cart);
-                                            }}>
+                                            onClick={() =>handleButtonUpdateCart(data)}>
                                             <AiFillPlusCircle
                                                 className={style.buttonIcon}
                                             />
