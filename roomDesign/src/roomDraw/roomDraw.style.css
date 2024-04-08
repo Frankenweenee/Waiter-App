@@ -1,0 +1,75 @@
+.main-room-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    padding: 1% 5% 0 5%;
+}
+
+.elements-button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 3vw;
+}
+
+.elements-aside-controls-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.create-element-button {
+    all: unset;
+    width: 50px;
+    cursor: pointer;
+}
+
+.all-controls-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.canvas {
+    position: relative;
+    width: 80vw;
+    height: 70vh;
+    border: 1px solid black;
+    background-color: rgba(95, 158, 160, 0.424);
+    margin: auto;
+}
+
+.bottom-controls-user-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.bottom-controls-user-container input {
+width: 5vw;
+height: 3vh;}
+
+.bottom-controls-user-container button {
+    display: flex;
+    align-items: center;
+    height: 5vh;
+    background-color:azure
+}
+
+.inputs-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.element-description-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.user-show-container {
+    display: flex;
+    flex-direction: row;
+}
